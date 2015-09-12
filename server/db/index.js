@@ -6,7 +6,6 @@ console.log('___________>>>>>>>>>>>> INDEX.')
 // and to the database "chat".
 
 var connection = mysql.createConnection({
-  host     : 'localhost',
   user     : 'root',
   password : '',
   database : 'chat'
@@ -14,6 +13,4 @@ var connection = mysql.createConnection({
 
 connection.connect();
 
-connection.end();
-
-module.exports.mysql = mysql;
+module.exports = connection;

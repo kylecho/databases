@@ -48,7 +48,7 @@ describe("Persistent Node Chat Server", function() {
         // TODO: You might have to change this test to get all the data from
         // your message table, since this is schema-dependent.
         var queryString = "SELECT * FROM messages";
-        var queryArgs = [];
+        var queryArgs = [''];
 
         dbConnection.query(queryString, queryArgs, function(err, results) {
           // Should have one result:
@@ -65,12 +65,10 @@ describe("Persistent Node Chat Server", function() {
 
   it("Should output all messages from the DB", function(done) {
     // Let's insert a message into the db
-       var tablename = "messages"; // TODO: fill this out
+       var tablename = ""; // TODO: fill this out
     // TODO - The exact query string and query args to use
     // here depend on the schema you design, so I'll leave
     // them up to you. */
-       var queryString = "SELECT messages FROM Messages";
-       var queryArgs = []; 
 
     dbConnection.query(queryString, queryArgs, function(err) {
       if (err) { throw err; }
