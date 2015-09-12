@@ -7,7 +7,7 @@ CREATE TABLE messages (
   id INT(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
   message TEXT,
   user_id INT(11) NOT NULL,
-  room_id INT(11) NOT NULL,
+  roomname VARCHAR(200) NOT NULL,
   INDEX(user_id),
   INDEX(room_id)
 );
